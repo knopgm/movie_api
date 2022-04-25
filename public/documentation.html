@@ -9,10 +9,109 @@
   <body>
     <h1>Documentation Page</h1>
     <p>
-      Thia is a API that provides users with access to a movie database where
+      This is a API that provides users with access to a movie database where
       they could search about different movies, directors, and genres. Users
       will be able to sign up, update their personal information, and create a
       list of their favorite movies.
     </p>
+    <ul>
+      <li>
+        Return a list of ALL movies to the user
+        <p>URL: "/movies"</p>
+        <p>Method: GET</p>
+        <p>Query parameters: "None"</p>
+        <p>Request: "None"</p>
+        <p>Response: "A JSON object holding data about all movies"</p>
+      </li>
+      <li>
+        Return data (description, genre, director, image URL, whether it's
+        featured or not) about a single movie by title to the user
+        <p>URL: "/movies/:title"</p>
+        <p>Method: GET</p>
+        <p>Query parameters: "title"</p>
+        <p>Request: "None"</p>
+        <p>
+          Response: "A JSON object holding all data about the searched movie"
+        </p>
+      </li>
+      <li>
+        Return data about a genre (description) by name/title (e.g., “Thriller”)
+        <p>URL: "/movies/genre/:genreName"</p>
+        <p>Method: GET</p>
+        <p>Query parameters: "genreName"</p>
+        <p>Request: "None"</p>
+        <p>Response: "A JSON object holding all infos about the genre"</p>
+      </li>
+      <li>
+        Return data about a director (bio, birth year, death year) by name
+        <p>URL: "/movies/directors/:directorName"</p>
+        <p>Method: GET</p>
+        <p>Query parameters: "directorName"</p>
+        <p>Request: "None"</p>
+        <p>
+          Response: "A JSON object holding all data about the searched director"
+        </p>
+      </li>
+      <li>
+        Allow new users to register
+        <p>URL: "/users"</p>
+        <p>Method: POST</p>
+        <p>Query parameters: "None"</p>
+        <p>
+          Request: "A JSON object holding data about the user to add. Structured
+          like: { name: "Lulu", favoriteMovies: [], } "
+        </p>
+        <p>
+          Response: "A JSON object holding data about the user that was added,
+          including an ID: { id: 1, name: "Lulu", favoriteMovies: [], } "
+        </p>
+      </li>
+      <li>
+        Allow users to update their user info (username)
+        <p>URL: "/users/:id"</p>
+        <p>Method: PUT</p>
+        <p>Query parameters: "id"</p>
+        <p>Request: "None"</p>
+        <p>
+          Response: "A JSON object holding data about the user that was updated"
+        </p>
+      </li>
+      <li>
+        Allow users to add a movie to their list of favorites (showing only a
+        text that a movie has been added—more on this later)
+        <p>URL: "/users/:id/:movieTitle"</p>
+        <p>Method: POST</p>
+        <p>Query parameters: "id, movieTitle"</p>
+        <p>Request: "None"</p>
+        <p>
+          Response: "A text message indicating whether the movie was
+          seccessfully added"
+        </p>
+      </li>
+      <li>
+        Allow users to remove a movie from their list of favorites (showing only
+        a text that a movie has been removed—more on this later)
+        <p>URL: "/users/:id/:movieTitle"</p>
+        <p>Method: DELETE</p>
+        <p>Query parameters: "id, movieTitle"</p>
+        <p>Request: "None"</p>
+        <p>
+          Response: "A text message indicating whether the movie was
+          seccessfully removed"
+        </p>
+      </li>
+      <li>
+        Allow existing users to deregister (showing only a text that a user
+        email has been removed—more on this later)
+        <p>URL: "/users/:id"</p>
+        <p>Method: DELETE</p>
+        <p>Query parameters: "id"</p>
+        <p>Request: "None"</p>
+        <p>
+          Response: "A text message indicating whether the user was successfully
+          removed"
+        </p>
+      </li>
+    </ul>
   </body>
 </html>
