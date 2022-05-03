@@ -1,0 +1,276 @@
+{
+  "users": [
+    {
+      "username": "Paul",
+      "password": 1234,
+      "email": "paul@paul.com",
+      "Birthday": "1985-02-19T00:00:00.000Z"
+    },
+    {
+      "username": "Lilly",
+      "password": 1987,
+      "email": "lilly@lilly.com",
+      "Birthday": "1995-07-22T00:00:00.000Z"
+    },
+    {
+      "username": "Sven",
+      "password": 4098,
+      "email": "sven@sven.com",
+      "Birthday": "1979-11-03T00:00:00.000Z"
+    },
+    {
+      "username": "Roger",
+      "password": 7484,
+      "email": "roger@roger.com",
+      "Birthday": "1999-01-14T00:00:00.000Z"
+    },
+    {
+      "username": "Candy",
+      "password": 9944,
+      "email": "candy@candy.com",
+      "Birthday": "1982-04-05T00:00:00.000Z"
+    }
+  ],
+  "movies": [
+    {
+      "Title": "Beetlejuice",
+      "Description": "A couple of recently deceased ghosts contract the services of a \"bio-exorcist\" in order to remove the obnoxious new owners of their house.",
+      "GenreID": {
+        "Name": "Fantasy",
+        "Description": "The Fantasy genre is..."
+      },
+      "DirectorID": {
+        "Name": "Tim Burton",
+        "Bio": "Tim Burton was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwODE3MDE0MV5BMl5BanBnXkFtZTgwNTk1MjI4MzE@._V1_SX300.jpg",
+      "Featured": true
+    },
+    {
+      "Title": "The Wolf of Wall Street",
+      "Description": "Based on the true story of Jordan Belfort, from his rise to a wealthy stock-broker living the high life to his fall involving crime, corruption and the federal government.",
+      "GenreID": {
+        "Name": "Drama",
+        "Description": "The Drama genre is..."
+      },
+      "DirectorID": {
+        "Name": "Martin Scorsese",
+        "Bio": "Martin Scorsese was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_SX300.jpg",
+      "Featured": true
+    },
+    {
+      "Title": "Hellboy II: The Golden Army",
+      "Description": "The mythical world starts a rebellion against humanity in order to rule the Earth, so Hellboy and his team must save the world from the rebellious creatures.",
+      "GenreID": {
+        "Name": "Fantasy",
+        "Description": "The Fantasy genre is..."
+      },
+      "DirectorID": {
+        "Name": "Guillermo del Toro",
+        "Bio": "Guillermo del Toro was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjA5NzgyMjc2Nl5BMl5BanBnXkFtZTcwOTU3MDI3MQ@@._V1_SX300.jpg",
+      "Featured": true
+    },
+    {
+      "Title": "Alice in Wonderland",
+      "Description": "Nineteen-year-old Alice returns to the magical world from her childhood adventure, where she reunites with her old friends and learns of her true destiny: to end the Red Queen's reign of terror.",
+      "GenreID": {
+        "Name": "Fantasy",
+        "Description": "The Fantasy genre is..."
+      },
+      "DirectorID": {
+        "Name": "Tim Burton",
+        "Bio": "Tim Burton was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTMwNjAxMTc0Nl5BMl5BanBnXkFtZTcwODc3ODk5Mg@@._V1_SX300.jpg",
+      "Featured": false
+    },
+    {
+      "Title": "Pacific Rim",
+      "Description": "As a war between humankind and monstrous sea creatures wages on, a former pilot and a trainee are paired up to drive a seemingly obsolete special weapon in a desperate effort to save the world from the apocalypse.",
+      "GenreID": {
+        "Name": "Action",
+        "Description": "The Action genre is..."
+      },
+      "DirectorID": {
+        "Name": "Guillermo del Toro",
+        "Bio": "Guillermo del Toro was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY3MTI5NjQ4Nl5BMl5BanBnXkFtZTcwOTU1OTU0OQ@@._V1_SX300.jpg",
+      "Featured": false
+    },
+    {
+      "Title": "Spirited Away",
+      "Description": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, and where humans are changed into beasts.",
+      "GenreID": {
+        "Name": "Animation",
+        "Description": "The Animation genre is..."
+      },
+      "DirectorID": {
+        "Name": "Hayao Miyazaki",
+        "Bio": "Hayao Miyazaki was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjYxMDcyMzIzNl5BMl5BanBnXkFtZTYwNDg2MDU3._V1_SX300.jpg",
+      "Featured": true
+    },
+    {
+      "Title": "The Imitation Game",
+      "Description": "During World War II, mathematician Alan Turing tries to crack the enigma code with help from fellow mathematicians.",
+      "GenreID": {
+        "Name": "Drama",
+        "Description": "The Drama genre is..."
+      },
+      "DirectorID": {
+        "Name": "Morten Tyldum",
+        "Bio": "Morten Tyldum was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNDkwNTEyMzkzNl5BMl5BanBnXkFtZTgwNTAwNzk3MjE@._V1_SX300.jpg",
+      "Featured": false
+    },
+    {
+      "Title": "Despicable Me",
+      "Description": "When a criminal mastermind uses a trio of orphan girls as pawns for a grand scheme, he finds their love is profoundly changing him for the better.",
+      "GenreID": {
+        "Name": "Animation",
+        "Description": "The Animation genre is..."
+      },
+      "DirectorID": {
+        "Name": "Pierre Coffin",
+        "Bio": "Pierre Coffin was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_SX300.jpg",
+      "Featured": true
+    },
+    {
+      "Title": "The Hobbit: An Unexpected Journey",
+      "Description": "A reluctant hobbit, Bilbo Baggins, sets out to the Lonely Mountain with a spirited group of dwarves to reclaim their mountain home - and the gold within it - from the dragon Smaug.",
+      "GenreID": {
+        "Name": "Fantasy",
+        "Description": "The Fantasy genre is..."
+      },
+      "DirectorID": {
+        "Name": "Peter Jackson",
+        "Bio": "Peter Jackson was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTcwNTE4MTUxMl5BMl5BanBnXkFtZTcwMDIyODM4OA@@._V1_SX300.jpg",
+      "Featured": true
+    },
+    {
+      "Title": "Ice Age",
+      "Description": "Set during the Ice Age, a sabertooth tiger, a sloth, and a wooly mammoth find a lost human infant, and they try to return him to his tribe.",
+      "GenreID": {
+        "Name": "Animation",
+        "Description": "The Animation genre is..."
+      },
+      "DirectorID": {
+        "Name": "Chris Wedge",
+        "Bio": "Chris Wedge was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjEyNzI1ODA0MF5BMl5BanBnXkFtZTYwODIxODY3._V1_SX300.jpg",
+      "Featured": false
+    },
+    {
+      "Title": "The Lord of the Rings: The Fellowship of the Ring",
+      "Description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle Earth from the Dark Lord Sauron.",
+      "GenreID": {
+        "Name": "Fantasy",
+        "Description": "The Fantasy genre is..."
+      },
+      "DirectorID": {
+        "Name": "Peter Jackson",
+        "Bio": "Peter Jackson was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BNTEyMjAwMDU1OV5BMl5BanBnXkFtZTcwNDQyNTkxMw@@._V1_SX300.jpg",
+      "Featured": false
+    },
+    {
+      "Title": "The Lord of the Rings: The Two Towers",
+      "Description": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
+      "GenreID": {
+        "Name": "Fantasy",
+        "Description": "The Fantasy genre is..."
+      },
+      "DirectorID": {
+        "Name": "Peter Jackson",
+        "Bio": "Peter Jackson was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAyNDU0NjY4NTheQTJeQWpwZ15BbWU2MDk4MTY2Nw@@._V1_SX300.jpg",
+      "Featured": true
+    },
+    {
+      "Title": "Ex Machina",
+      "Description": "A young programmer is selected to participate in a ground-breaking experiment in synthetic intelligence by evaluating the human qualities of a breath-taking humanoid A.I.",
+      "GenreID": {
+        "Name": "Sci-Fi",
+        "Description": "The Sci-Fi genre is..."
+      },
+      "DirectorID": {
+        "Name": "Alex Garland",
+        "Bio": "Alex Garland was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUxNzc0OTIxMV5BMl5BanBnXkFtZTgwNDI3NzU2NDE@._V1_SX300.jpg",
+      "Featured": false
+    },
+    {
+      "Title": "The Theory of Everything",
+      "Description": "A look at the relationship between the famous physicist Stephen Hawking and his wife.",
+      "GenreID": {
+        "Name": "Drama",
+        "Description": "The Drama genre is..."
+      },
+      "DirectorID": {
+        "Name": "James Marsh",
+        "Bio": "James Marsh was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTAwMTU4MDA3NDNeQTJeQWpwZ15BbWU4MDk4NTMxNTIx._V1_SX300.jpg",
+      "Featured": false
+    },
+    {
+      "Title": "The Martian",
+      "Description": "An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive.",
+      "GenreID": {
+        "Name": "Sci-Fi",
+        "Description": "The Sci-Fi genre is..."
+      },
+      "DirectorID": {
+        "Name": "Ridley Scott",
+        "Bio": "Ridley Scott was born in ...",
+        "Birthyear": "some date",
+        "Deathyear": "still a live"
+      },
+      "ImageUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_SX300.jpg",
+      "Featured": false
+    }
+  ]
+}
