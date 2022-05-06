@@ -1,9 +1,26 @@
+const mongoose = require("mongoose");
+const Models = require("./models.js");
+
+const Movies = Models.Movie;
+const Users = Models.User;
+
+mongoose.connect("mongodb://localhost:27017/myFlixDB", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 const express = require("express"),
   //Morgan instead of fs module, to best handle multiple files
   morgan = require("morgan"),
   app = express(),
   bodyParser = require("body-parser"),
   uuid = require("uuid");
+
+//express.static rather than using http, url and fs modules, for best handle the exposing of static files.
+app.use(express.static("public"));
+app.use(morgan("common"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 let users = [
   {
@@ -56,11 +73,6 @@ let movies = [
     Image: "https://...",
   },
 ];
-
-//express.static rather than using http, url and fs modules, for best handle the exposing of static files.
-app.use(express.static("public"));
-app.use(morgan("common"));
-app.use(bodyParser.json());
 
 //Allow existing users to deregister
 app.delete("/users/:id", (req, res) => {
