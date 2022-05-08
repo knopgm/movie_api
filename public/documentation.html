@@ -38,7 +38,7 @@
             Return data (description, genre, director, image URL, whether it's
             featured or not) about a single movie by title to the user
           </td>
-          <td>"/movies/:title"</td>
+          <td>"/movies/:Title"</td>
           <td>GET</td>
           <td>"Title"</td>
           <td>"None"</td>
@@ -49,9 +49,9 @@
             Return data about a genre (description) by name/title (e.g.,
             “Thriller”)
           </td>
-          <td>"/movies/genre/:genreName"</td>
+          <td>"/genre/:name"</td>
           <td>GET</td>
-          <td>"genreName"</td>
+          <td>"name"</td>
           <td>"None"</td>
           <td>"A JSON object holding all infos about the genre"</td>
         </tr>
@@ -59,9 +59,9 @@
           <td>
             Return data about a director (bio, birth year, death year) by name
           </td>
-          <td>"/movies/directors/:directorName"</td>
+          <td>"/directors/:name"</td>
           <td>GET</td>
-          <td>"directorName"</td>
+          <td>"name"</td>
           <td>"None"</td>
           <td>"A JSON object holding all data about the searched director"</td>
         </tr>
@@ -72,32 +72,40 @@
           <td>"None"</td>
           <td>
             "A JSON object holding data about the user to add. Structured like:
-            { name: "Lulu", favoriteMovies: [], } "
+            { Username: String, Password: String, Email: String, Birthday: Date
+            }"
           </td>
           <td>
             "A JSON object holding data about the user that was added, including
-            an ID: { id: 1, name: "Lulu", favoriteMovies: [], } "
+            an ID. Ex.:{ ID: 1, Username: "Lulu", Password: 12344, Email:
+            lulu@lulu.com, Birthday: 1999-04-05 }"
           </td>
         </tr>
         <tr>
           <td>Allow users to update their user info (username)</td>
-          <td>"/users/:id"</td>
+          <td>"/users/:Username"</td>
           <td>PUT</td>
-          <td>"id"</td>
+          <td>"Username"</td>
           <td>"None"</td>
-          <td>"A JSON object holding data about the user that was updated"</td>
+          <td>
+            "A JSON object holding data about the user that was updated. Ex.:{
+            Email: lulu_Updated@lulu.com}"
+          </td>
         </tr>
         <tr>
           <td>
             Allow users to add a movie to their list of favorites (showing only
             a text that a movie has been added—more on this later)
           </td>
-          <td>"/users/:id/:movieTitle"</td>
+          <td>"/users/:Username/movies/:MovieID"</td>
           <td>POST</td>
-          <td>"id, movieTitle"</td>
+          <td>"Username, MovieID"</td>
           <td>"None"</td>
           <td>
-            "A text message indicating whether the movie was seccessfully added"
+            "A JSON object holding all data about the user, including the added
+            movie. Ex.:{ ID: 1, Username: "Lulu", Password: 12344, Email:
+            lulu@lulu.com, Birthday: 1999-04-05, FavoriteMovies:
+            ["62711f4dfeca33c02c3251ed" ] }"
           </td>
         </tr>
         <tr>
@@ -105,13 +113,14 @@
             Allow users to remove a movie from their list of favorites (showing
             only a text that a movie has been removed—more on this later)
           </td>
-          <td>"/users/:id/:movieTitle"</td>
+          <td>"/users/:Username/movies/:MovieID"</td>
           <td>DELETE</td>
-          <td>"id, movieTitle"</td>
+          <td>"Username, MovieID"</td>
           <td>"None"</td>
           <td>
-            "A text message indicating whether the movie was seccessfully
-            removed"
+            "A JSON object holding all data about the user, excluding the added
+            movie. Ex.:{ ID: 1, Username: "Lulu", Password: 12344, Email:
+            lulu@lulu.com, Birthday: 1999-04-05, FavoriteMovies: [] }"
           </td>
         </tr>
         <tr>
@@ -119,14 +128,11 @@
             Allow existing users to deregister (showing only a text that a user
             email has been removed—more on this later)
           </td>
-          <td>"/users/:id"</td>
+          <td>"/users/:Username"</td>
           <td>DELETE</td>
-          <td>"id"</td>
+          <td>"Username"</td>
           <td>"None"</td>
-          <td>
-            "A text message indicating whether the user was successfully
-            removed"
-          </td>
+          <td>"A text message indicating whether the user was deleted"</td>
         </tr>
       </table>
     </div>
