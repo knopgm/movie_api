@@ -1,34 +1,50 @@
 {
   "users": [
     {
-      "username": "Paul",
-      "password": 1234,
-      "email": "paul@paul.com",
-      "Birthday": "1985-02-19T00:00:00.000Z"
+      "Username": "Paul",
+      "Password": 1234,
+      "Email": "paul@paul.com",
+      "Birthday": "1985-02-19T00:00:00.000Z",
+      "FavoriteMovies": [
+        "62711eeefeca33c02c3251ea",
+        "62711f4dfeca33c02c3251ed"
+      ]
     },
     {
-      "username": "Lilly",
-      "password": 1987,
-      "email": "lilly@lilly.com",
-      "Birthday": "1995-07-22T00:00:00.000Z"
+      "Username": "Lilly",
+      "Password": 1987,
+      "Email": "lilly@lilly.com",
+      "Birthday": "1995-07-22T00:00:00.000Z",
+      "FavoriteMovies": [
+        "62711f4dfeca33c02c3251ed",
+        "62711ff0feca33c02c3251f3"
+      ]
     },
     {
-      "username": "Sven",
-      "password": 4098,
-      "email": "sven@sven.com",
-      "Birthday": "1979-11-03T00:00:00.000Z"
+      "Username": "Sven",
+      "Password": 4098,
+      "Email": "sven@sven.com",
+      "Birthday": "1979-11-03T00:00:00.000Z",
+      "FavoriteMovies": [
+        "6271289bfeca33c02c32521d"
+      ]
     },
     {
-      "username": "Roger",
-      "password": 7484,
-      "email": "roger@roger.com",
-      "Birthday": "1999-01-14T00:00:00.000Z"
+      "Username": "Roger",
+      "Password": 7484,
+      "Email": "roger@roger.com",
+      "Birthday": "1999-01-14T00:00:00.000Z",
+      "FavoriteMovies": []
     },
     {
-      "username": "Candy",
-      "password": 9944,
-      "email": "candy@candy.com",
-      "Birthday": "1982-04-05T00:00:00.000Z"
+      "Username": "Candy",
+      "Password": 9944,
+      "Email": "candy@candy.com",
+      "Birthday": "1982-04-05T00:00:00.000Z",
+      "FavoriteMovies": [
+        "62711ff0feca33c02c3251f3",
+        "62712007feca33c02c3251f4"
+      ]
     }
   ],
   "movies": [
