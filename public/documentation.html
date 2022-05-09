@@ -31,7 +31,15 @@
           <td>GET</td>
           <td>"None"</td>
           <td>"None"</td>
-          <td>"A JSON object holding data about all movies"</td>
+          <td>
+            "A JSON object holding data about all movies. Ex.: [ { "Genre": {
+            "Name": "Thriller", "Description": "Thriller film, also know as..."
+            }, "Director": { "Name": "Jonathan Demme", "Bio": "Robert Jonathan
+            Demme was an American...", "Birth": "1944", "Death": "2017" },
+            "Actors": [], "_id": "62704010caaa0abffd6491ea", "Title": "Silence
+            of the Lambs", "Description": "updated", "ImagePath":
+            "silenceofthelambs.png", "Featured": true },...]"
+          </td>
         </tr>
         <tr>
           <td>
@@ -42,7 +50,17 @@
           <td>GET</td>
           <td>"Title"</td>
           <td>"None"</td>
-          <td>"A JSON object holding all data about the searched movie"</td>
+          <td>
+            "A JSON object holding all data about the searched movie. Ex.: {
+            "Genre": { "Name": "Fantasy", "Description": "The Fantasy genre
+            is..." }, "Director": { "Name": "Tim Burton", "Bio": "Tim Burton was
+            born in ...", "Birthyear": "some date", "Deathyear": "still a live"
+            }, "Actors": [], "_id": "62711e29feca33c02c3251e9", "Title":
+            "Beetlejuice", "Description": "A couple of recently deceased ghosts
+            contract the services of...", "ImageUrl":
+            "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwODE3MDE0MV5BMl5BanBnXkFtZTgwNTk1MjI4MzE@._V1_SX300.jpg",
+            "Featured": true }"
+          </td>
         </tr>
         <tr>
           <td>
@@ -53,7 +71,10 @@
           <td>GET</td>
           <td>"name"</td>
           <td>"None"</td>
-          <td>"A JSON object holding all infos about the genre"</td>
+          <td>
+            "A JSON object holding all infos about the genre. Ex.: { "Name":
+            "Fantasy", "Description": "The Fantasy genre is..." }"
+          </td>
         </tr>
         <tr>
           <td>
@@ -63,7 +84,11 @@
           <td>GET</td>
           <td>"name"</td>
           <td>"None"</td>
-          <td>"A JSON object holding all data about the searched director"</td>
+          <td>
+            "A JSON object holding all data about the searched director. Ex.: {
+            "Name": "Tim Burton", "Bio": "Tim Burton was born in ...",
+            "Birthyear": "some date", "Deathyear": "still a live" }"
+          </td>
         </tr>
         <tr>
           <td>Allow new users to register</td>
