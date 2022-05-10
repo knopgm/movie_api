@@ -21,6 +21,10 @@ app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+let auth = require("./auth")(app);
+const passport = require("passport");
+require("./passport");
+
 // Delete a user by username
 app.delete("/users/:Username", (req, res) => {
   Users.findOneAndRemove({ Username: req.params.Username })
@@ -146,16 +150,20 @@ app.put("/users/:Username", (req, res) => {
 });
 
 //Return a list of ALL movies
-app.get("/movies", (req, res) => {
-  Movies.find()
-    .then((movies) => {
-      res.status(201).json(movies);
-    })
-    .catch((err) => {
-      console.error(err);
-      res.status(500).send("Error: " + err);
-    });
-});
+app.get(
+  "/movies",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Movies.find()
+      .then((movies) => {
+        res.status(201).json(movies);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).send("Error: " + err);
+      });
+  }
+);
 
 //Return a list of ALL users
 app.get("/Users", (req, res) => {
