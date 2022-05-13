@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <title>Documentation</title>
   </head>
@@ -16,150 +20,325 @@
         will be able to sign up, update their personal information, and create a
         list of their favorite movies.
       </p>
-      <table>
-        <tr>
-          <th>Query</th>
-          <th>URL</th>
-          <th>Method</th>
-          <th>Query parameters</th>
-          <th>Request</th>
-          <th>Response</th>
-        </tr>
-        <tr>
-          <td>Return a list of ALL movies to the user</td>
-          <td>"/movies"</td>
-          <td>GET</td>
-          <td>"None"</td>
-          <td>"None"</td>
-          <td>
-            "A JSON object holding data about all movies. Ex.: [ { "Genre": {
-            "Name": "Thriller", "Description": "Thriller film, also know as..."
-            }, "Director": { "Name": "Jonathan Demme", "Bio": "Robert Jonathan
-            Demme was an American...", "Birth": "1944", "Death": "2017" },
-            "Actors": [], "_id": "62704010caaa0abffd6491ea", "Title": "Silence
-            of the Lambs", "Description": "updated", "ImagePath":
-            "silenceofthelambs.png", "Featured": true },...]"
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Return data (description, genre, director, image URL, whether it's
-            featured or not) about a single movie by title to the user
-          </td>
-          <td>"/movies/:Title"</td>
-          <td>GET</td>
-          <td>"Title"</td>
-          <td>"None"</td>
-          <td>
-            "A JSON object holding all data about the searched movie. Ex.: {
-            "Genre": { "Name": "Fantasy", "Description": "The Fantasy genre
-            is..." }, "Director": { "Name": "Tim Burton", "Bio": "Tim Burton was
-            born in ...", "Birthyear": "some date", "Deathyear": "still a live"
-            }, "Actors": [], "_id": "62711e29feca33c02c3251e9", "Title":
-            "Beetlejuice", "Description": "A couple of recently deceased ghosts
-            contract the services of...", "ImageUrl":
-            "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwODE3MDE0MV5BMl5BanBnXkFtZTgwNTk1MjI4MzE@._V1_SX300.jpg",
-            "Featured": true }"
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Return data about a genre (description) by name/title (e.g.,
+
+      <article class="card_wrapper card card--get">
+        <h1 class="card_header">
+          <div class="card_header_button">GET</div>
+          <div class="card_header_url">"/movies"</div>
+          <div class="card_header_return">
+            -> Return a list of ALL movies to the user
+          </div>
+        </h1>
+        <section class="input_section">
+          <h2 class="article_subtitle">Inputs</h2>
+          <div class="input_items">
+            <div class="item">Parameters: "None"</div>
+            <div class="item">Body: "None"</div>
+          </div>
+        </section>
+        <section class="response_section">
+          <h2 class="article_subtitle">Response</h2>
+          <div class="input_items">
+            <div class="item">
+              "A JSON object holding data about all movies."
+            </div>
+            <div class="item">
+              Ex.: 
+              [ 
+                { 
+                  "Genre": 
+                  { 
+                    "Name": "Thriller", 
+                    "Description": "Thriller film, also know as..." 
+                  }, 
+                  "Director": 
+                    { 
+                      "Name": "Jonathan Demme",
+                      "Bio": "Robert Jonathan Demme was an American...", 
+                      "Birth":"1944", 
+                      "Death": "2017" 
+                    }, 
+                  "Actors": [], 
+                  "_id": "62704010caaa0abffd6491ea", 
+                  "Title": "Silence of the Lambs",
+                  "Description": "updated", 
+                  "ImagePath": "silenceofthelambs.png",
+                  "Featured": true 
+                },
+              ]"
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <article class="card_wrapper card card--get">
+        <h1 class="card_header">
+          <div class="card_header_button">GET</div>
+          <div class="card_header_url">"/movies/:Title"</div>
+          <div class="card_header_return">
+            -> Return data (description, genre, director, image URL, whether
+            it's featured or not) about a single movie by title to the user
+          </div>
+        </h1>
+        <section class="input_section">
+          <h2 class="article_subtitle">Inputs</h2>
+          <div class="input_items">
+            <div class="item">Parameters: "Title"</div>
+            <div class="item">Body: "None"</div>
+          </div>
+        </section>
+        <section class="response_section">
+          <h2 class="article_subtitle">Response</h2>
+          <div class="input_items">
+            <div class="item">
+              "A JSON object holding all data about the searched movie."
+            </div>
+            <div class="item">
+              Ex.: { "Genre": { "Name": "Fantasy", "Description": "The Fantasy
+              genre is..." }, "Director": { "Name": "Tim Burton", "Bio": "Tim
+              Burton was born in ...", "Birthyear": "some date", "Deathyear":
+              "still a live" }, "Actors": [], "_id": "62711e29feca33c02c3251e9",
+              "Title": "Beetlejuice", "Description": "A couple of recently
+              deceased ghosts contract the services of...", "ImageUrl":
+              "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwODE3MDE0MV5BMl5BanBnXkFtZTgwNTk1MjI4MzE@._V1_SX300.jpg",
+              "Featured": true }"
+            </div>
+          </div>
+        </section>
+      </article>
+      <article class="card_wrapper card card--get">
+        <h1 class="card_header">
+          <div class="card_header_button">GET</div>
+          <div class="card_header_url">"/genre/:name"</div>
+          <div class="card_header_return">
+            -> Return data about a genre (description) by name/title (e.g.,
             “Thriller”)
-          </td>
-          <td>"/genre/:name"</td>
-          <td>GET</td>
-          <td>"name"</td>
-          <td>"None"</td>
-          <td>
-            "A JSON object holding all infos about the genre. Ex.: { "Name":
-            "Fantasy", "Description": "The Fantasy genre is..." }"
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Return data about a director (bio, birth year, death year) by name
-          </td>
-          <td>"/directors/:name"</td>
-          <td>GET</td>
-          <td>"name"</td>
-          <td>"None"</td>
-          <td>
-            "A JSON object holding all data about the searched director. Ex.: {
-            "Name": "Tim Burton", "Bio": "Tim Burton was born in ...",
-            "Birthyear": "some date", "Deathyear": "still a live" }"
-          </td>
-        </tr>
-        <tr>
-          <td>Allow new users to register</td>
-          <td>"/users"</td>
-          <td>POST</td>
-          <td>"None"</td>
-          <td>
-            "A JSON object holding data about the user to add. Structured like:
-            { Username: String, Password: String, Email: String, Birthday: Date
-            }"
-          </td>
-          <td>
+          </div>
+        </h1>
+        <section class="input_section">
+          <h2 class="article_subtitle">Inputs</h2>
+          <div class="input_items">
+            <div class="item">Parameters: "name"</div>
+            <div class="item">Body: "None"</div>
+          </div>
+        </section>
+        <section class="response_section">
+          <h2 class="article_subtitle">Response</h2>
+          <div class="input_items">
+            <div class="item">
+              "A JSON object holding all infos about the genre."
+            </div>
+            <div class="item">
+              Ex.: { "Name": "Fantasy", "Description": "The Fantasy genre is..."
+              }"
+            </div>
+          </div>
+        </section>
+      </article>
+      <article class="card_wrapper card card--get">
+        <h1 class="card_header">
+          <div class="card_header_button">GET</div>
+          <div class="card_header_url">"/directors/:name"</div>
+          <div class="card_header_return">
+            -> Return data about a director (bio, birth year, death year) by
+            name
+          </div>
+        </h1>
+        <section class="input_section">
+          <h2 class="article_subtitle">Inputs</h2>
+          <div class="input_items">
+            <div class="item">Parameters: "name"</div>
+            <div class="item">Body: "None"</div>
+          </div>
+        </section>
+        <section class="response_section">
+          <h2 class="article_subtitle">Response</h2>
+          <div class="input_items">
+            <div class="item">
+              "A JSON object holding all data about the searched director."
+            </div>
+            <div class="item">
+              Ex.: { "Name": "Tim Burton", "Bio": "Tim Burton was born in ...",
+              "Birthyear": "some date", "Deathyear": "still a live" }"
+            </div>
+          </div>
+        </section>
+      </article>
+      <article class="card_wrapper card card--get">
+        <h1 class="card_header">
+          <div class="card_header_button">GET</div>
+          <div class="card_header_url">"/directors/:name"</div>
+          <div class="card_header_return">
+            -> Return data about a director (bio, birth year, death year) by
+            name
+          </div>
+        </h1>
+        <section class="input_section">
+          <h2 class="article_subtitle">Inputs</h2>
+          <div class="input_items">
+            <div class="item">Parameters: "name"</div>
+            <div class="item">Body: "None"</div>
+          </div>
+        </section>
+        <section class="response_section">
+          <h2 class="article_subtitle">Response</h2>
+          <div class="input_items">
+            <div class="item">
+              "A JSON object holding all data about the searched director."
+            </div>
+            <div class="item">
+              Ex.: { "Name": "Tim Burton", "Bio": "Tim Burton was born in ...",
+              "Birthyear": "some date", "Deathyear": "still a live" }"
+            </div>
+          </div>
+        </section>
+      </article>
+    </article>
+    <article class="card_wrapper card card--post">
+      <h1 class="card_header">
+        <div class="card_header_button">POST</div>
+        <div class="card_header_url">"/users"</div>
+        <div class="card_header_return">
+          -> Allow new users to register
+        </div>
+      </h1>
+      <section class="input_section">
+        <h2 class="article_subtitle">Inputs</h2>
+        <div class="input_items">
+          <div class="item">Parameters: "None"</div>
+          <div class="item">Body: "None"</div>
+        </div>
+      </section>
+      <section class="response_section">
+        <h2 class="article_subtitle">Response</h2>
+        <div class="input_items">
+          <div class="item">
             "A JSON object holding data about the user that was added, including
-            an ID. Ex.:{ ID: 1, Username: "Lulu", Password: 12344, Email:
-            lulu@lulu.com, Birthday: 1999-04-05 }"
-          </td>
-        </tr>
-        <tr>
-          <td>Allow users to update their user info (username)</td>
-          <td>"/users/:Username"</td>
-          <td>PUT</td>
-          <td>"Username"</td>
-          <td>"None"</td>
-          <td>
-            "A JSON object holding data about the user that was updated. Ex.:{
-            Email: lulu_Updated@lulu.com}"
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Allow users to add a movie to their list of favorites (showing only
-            a text that a movie has been added—more on this later)
-          </td>
-          <td>"/users/:Username/movies/:MovieID"</td>
-          <td>POST</td>
-          <td>"Username, MovieID"</td>
-          <td>"None"</td>
-          <td>
+            an ID."
+          </div>
+          <div class="item">
+            Ex.:{ ID: 1, Username: "Lulu", Password: 12344, Email:
+          lulu@lulu.com, Birthday: 1999-04-05 }"
+          </div>
+        </div>
+      </section>
+    </article>
+    <article class="card_wrapper card card--put">
+      <h1 class="card_header">
+        <div class="card_header_button">PUT</div>
+        <div class="card_header_url">"/users/:Username"</div>
+        <div class="card_header_return">
+          -> Allow users to update their user info (username)
+        </div>
+      </h1>
+      <section class="input_section">
+        <h2 class="article_subtitle">Inputs</h2>
+        <div class="input_items">
+          <div class="item">Parameters: "Username"</div>
+          <div class="item">Body: "None"</div>
+        </div>
+      </section>
+      <section class="response_section">
+        <h2 class="article_subtitle">Response</h2>
+        <div class="input_items">
+          <div class="item">
+            "A JSON object holding data about the user that was updated."
+          </div>
+          <div class="item">
+            Ex.: "{Email: lulu_Updated@lulu.com}"
+          </div>
+        </div>
+      </section>
+    </article>
+    <article class="card_wrapper card card--post">
+      <h1 class="card_header">
+        <div class="card_header_button">POST</div>
+        <div class="card_header_url">"/users/:Username/movies/:MovieID"</div>
+        <div class="card_header_return">
+          -> Allow users to add a movie to their list of favorites (showing only a
+          text that a movie has been added—more on this later)
+        </div>
+      </h1>
+      <section class="input_section">
+        <h2 class="article_subtitle">Inputs</h2>
+        <div class="input_items">
+          <div class="item">Parameters: "Username, MovieID"</div>
+          <div class="item">Body: "None"</div>
+        </div>
+      </section>
+      <section class="response_section">
+        <h2 class="article_subtitle">Response</h2>
+        <div class="input_items">
+          <div class="item">
             "A JSON object holding all data about the user, including the added
-            movie. Ex.:{ ID: 1, Username: "Lulu", Password: 12344, Email:
+          movie."
+          </div>
+          <div class="item">
+            Ex.: "{ ID: 1, Username: "Lulu", Password: 12344, Email:
             lulu@lulu.com, Birthday: 1999-04-05, FavoriteMovies:
             ["62711f4dfeca33c02c3251ed" ] }"
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Allow users to remove a movie from their list of favorites (showing
-            only a text that a movie has been removed—more on this later)
-          </td>
-          <td>"/users/:Username/movies/:MovieID"</td>
-          <td>DELETE</td>
-          <td>"Username, MovieID"</td>
-          <td>"None"</td>
-          <td>
+          </div>
+        </div>
+      </section>
+    </article>
+    <article class="card_wrapper card card--delete">
+      <h1 class="card_header">
+        <div class="card_header_button">DELETE</div>
+        <div class="card_header_url">"/users/:Username/movies/:MovieID"</div>
+        <div class="card_header_return">
+          -> Allow users to remove a movie from their list of favorites (showing
+          only a text that a movie has been removed—more on this later)
+        </div>
+      </h1>
+      <section class="input_section">
+        <h2 class="article_subtitle">Inputs</h2>
+        <div class="input_items">
+          <div class="item">Parameters: "Username, MovieID"</div>
+          <div class="item">Body: "None"</div>
+        </div>
+      </section>
+      <section class="response_section">
+        <h2 class="article_subtitle">Response</h2>
+        <div class="input_items">
+          <div class="item">
             "A JSON object holding all data about the user, excluding the added
-            movie. Ex.:{ ID: 1, Username: "Lulu", Password: 12344, Email:
+          movie."
+          </div>
+          <div class="item">
+            Ex.: "{ ID: 1, Username: "Lulu", Password: 12344, Email:
             lulu@lulu.com, Birthday: 1999-04-05, FavoriteMovies: [] }"
-          </td>
-        </tr>
-        <tr>
-          <td>
-            Allow existing users to deregister (showing only a text that a user
-            email has been removed—more on this later)
-          </td>
-          <td>"/users/:Username"</td>
-          <td>DELETE</td>
-          <td>"Username"</td>
-          <td>"None"</td>
-          <td>"A text message indicating whether the user was deleted"</td>
-        </tr>
-      </table>
+          </div>
+        </div>
+      </section>
+    </article>
+    <article class="card_wrapper card card--delete">
+      <h1 class="card_header">
+        <div class="card_header_button">DELETE</div>
+        <div class="card_header_url">"/users/:Username"</div>
+        <div class="card_header_return">
+          -> Allow existing users to deregister (showing only a text that a user
+          email has been removed—more on this later)
+        </div>
+      </h1>
+      <section class="input_section">
+        <h2 class="article_subtitle">Inputs</h2>
+        <div class="input_items">
+          <div class="item">Parameters: "Username"</div>
+          <div class="item">Body: "None"</div>
+        </div>
+      </section>
+      <section class="response_section">
+        <h2 class="article_subtitle">Response</h2>
+        <div class="input_items">
+          <div class="item">
+            "A text message indicating whether the user was deleted"
+          </div>
+          <div class="item">
+            Ex.: "None"
+          </div>
+        </div>
+      </section>
+    </article>
     </div>
   </body>
 </html>
