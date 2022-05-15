@@ -41,6 +41,7 @@ body {
   border: 1px solid;
   border-radius: 10px;
   margin: 5px;
+  overflow: hidden;
 }
 
 .card_header {
@@ -59,6 +60,9 @@ body {
   text-align: center;
   text-shadow: 0 1px 0 rgb(0 0 0 / 10%);
   min-width: 80px;
+}
+.card_header_url {
+  flex: 0 1 calc(30% - 10px);
 }
 .card_header_return {
   width: 50%;
