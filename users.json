@@ -1,0 +1,8 @@
+{"_id":{"$oid":"62752be1ce8b0c29c4e5911d"},"Username":"Paul","Password":1234,"Email":"paul@paul.com","Birthday":"1985-02-19T00:00:00.000Z","FavoriteMovies":["62711eeefeca33c02c3251ea","62711f4dfeca33c02c3251ed"]}
+{"_id":{"$oid":"62752c0ace8b0c29c4e5911e"},"Username":"Lilly","Password":1987,"Email":"lilly@lilly.com","Birthday":"1995-07-22T00:00:00.000Z","FavoriteMovies":["62711f4dfeca33c02c3251ed","62711ff0feca33c02c3251f3"]}
+{"_id":{"$oid":"62752c21ce8b0c29c4e5911f"},"Username":"Sven","Password":4098,"Email":"sven@sven.com","Birthday":"1979-11-03T00:00:00.000Z","FavoriteMovies":["6271289bfeca33c02c32521d"]}
+{"_id":{"$oid":"62752c35ce8b0c29c4e59120"},"Username":"Roger","Password":7484,"Email":"roger@roger.com","Birthday":"1999-01-14T00:00:00.000Z","FavoriteMovies":[]}
+{"_id":{"$oid":"62752c43ce8b0c29c4e59121"},"Username":"Candy","Password":9944,"Email":"candy@candy.com","Birthday":"1982-04-05T00:00:00.000Z","FavoriteMovies":["62711ff0feca33c02c3251f3","62712007feca33c02c3251f4"]}
+{"_id":{"$oid":"627a25d013665197057bfa23"},"Username":"Paulina","Password":"1234","Email":"pauly@pauly.com","Birthday":{"$date":"1985-06-19T00:00:00Z"},"FavoriteMovies":[],"__v":0}
+{"_id":{"$oid":"627d2d80370b08dbd06884e6"},"Username":"Peper","Password":"$2b$10$RgVJ1Px3IBwGzysx9knQY.55XPqY4M0AyebUbFcwvgbrBuHXVrtlC","Email":"pepe_up_to_date@pepe.com","Birthday":{"$date":"1985-08-18T00:00:00Z"},"FavoriteMovies":[],"__v":0}
+{"_id":{"$oid":"627d2fe8370b08dbd06884ef"},"Username":"Julius","Password":"$2b$10$ajY2pYQVRj3L14bUYnnp..w7laKERP90f.Jhpec4TVLyfOQIasii6","Email":"julius@julius.com","Birthday":{"$date":"1983-08-14T00:00:00Z"},"FavoriteMovies":[],"__v":0}
