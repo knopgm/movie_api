@@ -12,16 +12,16 @@ const Movies = Models.Movie;
 const Users = Models.User;
 
 // localhost connection:
-// mongoose.connect("mongodb://localhost:27017/myFlixDB", {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
-
-//MongoDB Atlas DB. Public connection:
-mongoose.connect(process.env.CONNECTION_URI, {
+mongoose.connect("mongodb://localhost:27017/myFlixDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
+
+//MongoDB Atlas DB. Public connection:
+// mongoose.connect(process.env.CONNECTION_URI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
 //express.static rather than using http, url and fs modules, for best handle the exposing of static files.
 app.use(express.static("public"));
@@ -58,7 +58,7 @@ app.delete(
   "/users/:username",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
-    Users.findOneAndRemove({ Username: req.params.username })
+    Users.findOneAndRemove({ username: req.params.username })
       .then((user) => {
         if (!user) {
           res.status(400).send(req.params.username + " was not found");
@@ -79,9 +79,9 @@ app.delete(
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     Users.findOneAndUpdate(
-      { Username: req.params.username },
+      { username: req.params.username },
       {
-        $pull: { FavoriteMovies: req.params.movieID },
+        $pull: { favoriteMovies: req.params.movieID },
       },
       { new: true }, // This line makes sure that the updated document is returned
       (err, updatedUser) => {
@@ -104,7 +104,7 @@ app.post(
     Users.findOneAndUpdate(
       { username: req.params.username },
       {
-        $push: { FavoriteMovies: req.params.movieID },
+        $push: { favoriteMovies: req.params.movieID },
       },
       { new: true }, // This line makes sure that the updated document is returned
       (err, updatedUser) => {
@@ -149,6 +149,7 @@ app.post(
 
     let hashedPassword = Users.hashPassword(req.body.password);
     Users.findOne({ username: req.body.username })
+
       .then((user) => {
         if (user) {
           return res.status(400).send(req.body.username + "already exists");
@@ -284,7 +285,7 @@ app.get(
   (req, res) => {
     Movies.findOne({ "genre.name": req.params.name }).then((movie) => {
       if (movie) {
-        res.status(200).json(movie.Genre);
+        res.status(200).json(movie.genre);
       } else {
         res.status(400).send("Genre not Found");
       }

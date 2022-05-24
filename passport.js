@@ -10,12 +10,11 @@ let Users = Models.User,
 passport.use(
   new LocalStrategy(
     {
-      usernameField: "Username",
-      passwordField: "Password",
+      usernameField: "username",
+      passwordField: "password",
     },
     (username, password, callback) => {
-      console.log(username + " " + password);
-      Users.findOne({ Username: username }, (error, user) => {
+      Users.findOne({ username: username }, (error, user) => {
         if (error) {
           console.log(error);
           return callback(error);

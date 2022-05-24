@@ -46,24 +46,24 @@
               Ex.: 
               [ 
                 { 
-                  "Genre": 
+                  "genre": 
                   { 
-                    "Name": "Thriller", 
-                    "Description": "Thriller film, also know as..." 
+                    "name": "Thriller", 
+                    "description": "Thriller film, also know as..." 
                   }, 
-                  "Director": 
+                  "director": 
                     { 
-                      "Name": "Jonathan Demme",
-                      "Bio": "Robert Jonathan Demme was an American...", 
-                      "Birth":"1944", 
-                      "Death": "2017" 
+                      "name": "Jonathan Demme",
+                      "bio": "Robert Jonathan Demme was an American...", 
+                      "birth":"1944", 
+                      "death": "2017" 
                     }, 
-                  "Actors": [], 
+                  "actors": [], 
                   "_id": "62704010caaa0abffd6491ea", 
-                  "Title": "Silence of the Lambs",
-                  "Description": "updated", 
-                  "ImagePath": "silenceofthelambs.png",
-                  "Featured": true 
+                  "title": "Silence of the Lambs",
+                  "description": "updated", 
+                  "imagePath": "silenceofthelambs.png",
+                  "featured": true 
                 },
               ]"
             </div>
@@ -74,7 +74,7 @@
       <article class="card_wrapper card card--get">
         <h1 class="card_header">
           <div class="card_header_button">GET</div>
-          <div class="card_header_url">"/movies/:Title"</div>
+          <div class="card_header_url">"/movies/:title"</div>
           <div class="card_header_return">
             -> Return data (description, genre, director, image URL, whether
             it's featured or not) about a single movie by title to the user
@@ -83,7 +83,7 @@
         <section class="input_section">
           <h2 class="article_subtitle">Inputs</h2>
           <div class="input_items">
-            <div class="item">Parameters: "Title"</div>
+            <div class="item">Parameters: "title"</div>
             <div class="item">Body: "None"</div>
           </div>
         </section>
@@ -94,14 +94,14 @@
               "A JSON object holding all data about the searched movie."
             </div>
             <div class="item">
-              Ex.: { "Genre": { "Name": "Fantasy", "Description": "The Fantasy
-              genre is..." }, "Director": { "Name": "Tim Burton", "Bio": "Tim
-              Burton was born in ...", "Birthyear": "some date", "Deathyear":
-              "still a live" }, "Actors": [], "_id": "62711e29feca33c02c3251e9",
-              "Title": "Beetlejuice", "Description": "A couple of recently
-              deceased ghosts contract the services of...", "ImageUrl":
+              Ex.: { "genre": { "name": "Fantasy", "description": "The Fantasy
+              genre is..." }, "director": { "name": "Tim Burton", "bio": "Tim
+              Burton was born in ...", "birthyear": "some date", "deathyear":
+              "still a live" }, "actors": [], "_id": "62711e29feca33c02c3251e9",
+              "title": "Beetlejuice", "description": "A couple of recently
+              deceased ghosts contract the services of...", "imageUrl":
               "https://images-na.ssl-images-amazon.com/images/M/MV5BMTUwODE3MDE0MV5BMl5BanBnXkFtZTgwNTk1MjI4MzE@._V1_SX300.jpg",
-              "Featured": true }"
+              "featured": true }"
             </div>
           </div>
         </section>
@@ -129,7 +129,7 @@
               "A JSON object holding all infos about the genre."
             </div>
             <div class="item">
-              Ex.: { "Name": "Fantasy", "Description": "The Fantasy genre is..."
+              Ex.: { "name": "Fantasy", "description": "The Fantasy genre is..."
               }"
             </div>
           </div>
@@ -158,8 +158,8 @@
               "A JSON object holding all data about the searched director."
             </div>
             <div class="item">
-              Ex.: { "Name": "Tim Burton", "Bio": "Tim Burton was born in ...",
-              "Birthyear": "some date", "Deathyear": "still a live" }"
+              Ex.: { "name": "Tim Burton", "bio": "Tim Burton was born in ...",
+              "birthyear": "some date", "deathyear": "still a live" }"
             </div>
           </div>
         </section>
@@ -177,7 +177,8 @@
         <h2 class="article_subtitle">Inputs</h2>
         <div class="input_items">
           <div class="item">Parameters: "None"</div>
-          <div class="item">Body: "None"</div>
+          <div class="item">Body: "username": "Lulu", "password": "12344", "email":
+            "lulu@lulu.com", "birthday": "1999-04-05"</div>
         </div>
       </section>
       <section class="response_section">
@@ -188,8 +189,38 @@
             an ID."
           </div>
           <div class="item">
-            Ex.:{ ID: 1, Username: "Lulu", Password: 12344, Email:
-          lulu@lulu.com, Birthday: 1999-04-05 }"
+            Ex.:{ ID: 1, "username": "Lulu", "password": "12344", "email":
+          "lulu@lulu.com", "birthday": "1999-04-05" }"
+          </div>
+        </div>
+      </section>
+    </article>
+    <article class="card_wrapper card card--post">
+      <h1 class="card_header">
+        <div class="card_header_button">POST</div>
+        <div class="card_header_url">"/login"</div>
+        <div class="card_header_return">
+          -> Allow users to login
+        </div>
+      </h1>
+      <section class="input_section">
+        <h2 class="article_subtitle">Inputs</h2>
+        <div class="input_items">
+          <div class="item">**Choose between Parameters or Body to login**</div>
+          <div class="item">Parameters: "username, password"</div>
+          <div class="item">Body: "username": "Lulu", "password": "12344"</div>
+        </div>
+      </section>
+      <section class="response_section">
+        <h2 class="article_subtitle">Response</h2>
+        <div class="input_items">
+          <div class="item">
+            "A JSON object holding data about the user that was loged, including
+            an ID and a autorization token."
+          </div>
+          <div class="item">
+            Ex.:{ ID: 1, "username": "Lulu", "password": "12344", "email":
+          "lulu@lulu.com", "birthday": "1999-04-05" } {"token": "dslfaihfoiahodfhaljdfkasd..."}"
           </div>
         </div>
       </section>
@@ -197,7 +228,7 @@
     <article class="card_wrapper card card--put">
       <h1 class="card_header">
         <div class="card_header_button">PUT</div>
-        <div class="card_header_url">"/users/:Username"</div>
+        <div class="card_header_url">"/users/:username"</div>
         <div class="card_header_return">
           -> Allow users to update their user info (username)
         </div>
@@ -205,7 +236,7 @@
       <section class="input_section">
         <h2 class="article_subtitle">Inputs</h2>
         <div class="input_items">
-          <div class="item">Parameters: "Username"</div>
+          <div class="item">Parameters: "username"</div>
           <div class="item">Body: "None"</div>
         </div>
       </section>
@@ -224,7 +255,7 @@
     <article class="card_wrapper card card--post">
       <h1 class="card_header">
         <div class="card_header_button">POST</div>
-        <div class="card_header_url">"/users/:Username/movies/:MovieID"</div>
+        <div class="card_header_url">"/users/:username/movies/:movieID"</div>
         <div class="card_header_return">
           -> Allow users to add a movie to their list of favorites (showing only a
           text that a movie has been added—more on this later)
@@ -233,7 +264,7 @@
       <section class="input_section">
         <h2 class="article_subtitle">Inputs</h2>
         <div class="input_items">
-          <div class="item">Parameters: "Username, MovieID"</div>
+          <div class="item">Parameters: "username, movieID"</div>
           <div class="item">Body: "None"</div>
         </div>
       </section>
@@ -245,8 +276,8 @@
           movie."
           </div>
           <div class="item">
-            Ex.: "{ ID: 1, Username: "Lulu", Password: 12344, Email:
-            lulu@lulu.com, Birthday: 1999-04-05, FavoriteMovies:
+            Ex.: "{ ID: 1, username: "Lulu", password: 12344, email:
+            lulu@lulu.com, birthday: 1999-04-05, favoriteMovies:
             ["62711f4dfeca33c02c3251ed" ] }"
           </div>
         </div>
@@ -255,7 +286,7 @@
     <article class="card_wrapper card card--delete">
       <h1 class="card_header">
         <div class="card_header_button">DELETE</div>
-        <div class="card_header_url">"/users/:Username/movies/:MovieID"</div>
+        <div class="card_header_url">"/users/:username/movies/:movieID"</div>
         <div class="card_header_return">
           -> Allow users to remove a movie from their list of favorites (showing
           only a text that a movie has been removed—more on this later)
@@ -264,7 +295,7 @@
       <section class="input_section">
         <h2 class="article_subtitle">Inputs</h2>
         <div class="input_items">
-          <div class="item">Parameters: "Username, MovieID"</div>
+          <div class="item">Parameters: "username, movieID"</div>
           <div class="item">Body: "None"</div>
         </div>
       </section>
@@ -276,8 +307,8 @@
           movie."
           </div>
           <div class="item">
-            Ex.: "{ ID: 1, Username: "Lulu", Password: 12344, Email:
-            lulu@lulu.com, Birthday: 1999-04-05, FavoriteMovies: [] }"
+            Ex.: "{ ID: 1, username: "Lulu", password: 12344, email:
+            lulu@lulu.com, birthday: 1999-04-05, favoriteMovies: [] }"
           </div>
         </div>
       </section>
@@ -285,7 +316,7 @@
     <article class="card_wrapper card card--delete">
       <h1 class="card_header">
         <div class="card_header_button">DELETE</div>
-        <div class="card_header_url">"/users/:Username"</div>
+        <div class="card_header_url">"/users/:username"</div>
         <div class="card_header_return">
           -> Allow existing users to deregister (showing only a text that a user
           email has been removed—more on this later)
@@ -294,7 +325,7 @@
       <section class="input_section">
         <h2 class="article_subtitle">Inputs</h2>
         <div class="input_items">
-          <div class="item">Parameters: "Username"</div>
+          <div class="item">Parameters: "username"</div>
           <div class="item">Body: "None"</div>
         </div>
       </section>
