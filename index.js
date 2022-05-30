@@ -12,16 +12,16 @@ const Movies = Models.Movie;
 const Users = Models.User;
 
 // localhost connection:
-mongoose.connect("mongodb://localhost:27017/myFlixDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-//MongoDB Atlas DB. Public connection:
-// mongoose.connect(process.env.CONNECTION_URI, {
+// mongoose.connect("mongodb://localhost:27017/myFlixDB", {
 //   useNewUrlParser: true,
 //   useUnifiedTopology: true,
 // });
+
+//MongoDB Atlas DB. Public connection:
+mongoose.connect(process.env.CONNECTION_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 //express.static rather than using http, url and fs modules, for best handle the exposing of static files.
 app.use(express.static("public"));
