@@ -132,7 +132,7 @@ app.post(
 app.post(
   "/users",
   [
-    check("username", "Username is required").isLength({ min: 5 }),
+    check("username", "Username is required").isLength({ min: 2 }),
     check(
       "username",
       "Username contains non alphanumeric characters - not allowed."
@@ -249,12 +249,28 @@ app.get(
 
 //Return a list of ALL users
 app.get(
-  "/Users",
+  "/users",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     Users.find()
       .then((users) => {
         res.status(201).json(users);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).send("Error: " + err);
+      });
+  }
+);
+
+//Get user by username
+app.get(
+  "/users/:username",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    Users.findOne({ username: req.params.username })
+      .then((user) => {
+        res.status(201).json(user);
       })
       .catch((err) => {
         console.error(err);
