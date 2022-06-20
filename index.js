@@ -312,7 +312,7 @@ app.get(
 
 //Return data about a director by name
 app.get(
-  "/directors/:name",
+  "/director/:name",
   passport.authenticate("jwt", { session: false }),
   (req, res) => {
     Movies.findOne({ "director.name": req.params.name }).then((movie) => {
