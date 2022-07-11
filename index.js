@@ -191,11 +191,6 @@ app.post(
 app.put(
   "/users/:username",
   [
-    check("username", "Username is required").isLength({ min: 5 }),
-    check(
-      "username",
-      "Username contains non alphanumeric characters - not allowed."
-    ).isAlphanumeric(),
     check("password", "Password is required").not().isEmpty(),
     check("email", "Email does not appear to be valid").isEmail(),
   ],
@@ -212,7 +207,6 @@ app.put(
       { username: req.params.username },
       {
         $set: {
-          username: req.body.username,
           password: hashedPassword,
           email: req.body.email,
           birthday: req.body.birthday,
