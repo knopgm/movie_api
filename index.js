@@ -34,6 +34,7 @@ let allowedOrigins = [
   "http://localhost:1234",
   "https://myflix-gkm.netlify.app",
   "https://knopgm.github.io",
+  "https://my-angular-flix.netlify.app",
 ];
 
 app.use(
