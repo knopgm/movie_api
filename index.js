@@ -57,7 +57,11 @@ let auth = require("./auth")(app);
 const passport = require("passport");
 require("./passport");
 
-// Delete a user by username
+/**
+ * Delete a user by username
+ * @param {string} username
+ * @returns {string} A text message indicating whether the user was deleted
+ */
 app.delete(
   "/users/:username",
   passport.authenticate("jwt", { session: false }),
@@ -77,7 +81,12 @@ app.delete(
   }
 );
 
-//Allow users to remove a movie from their list of favorites
+/**
+ * Allow users to remove a movie from their list of favorites
+ * @param {string} username
+ * @param {string} movieID
+ * @returns {string} A JSON object holding all data about the user, excluding the deleted movie
+ */
 app.delete(
   "/users/:username/movies/:movieID",
   passport.authenticate("jwt", { session: false }),
@@ -100,7 +109,12 @@ app.delete(
   }
 );
 
-//Allow users to add a movie to their list of favorites
+/**
+ * Allow users to add a movie to their list of favorites
+ * @param {string} username
+ * @param {string} movieID
+ * @returns {string} A JSON object holding all data about the user, including the added movie
+ */
 app.post(
   "/users/:username/movies/:movieID",
   passport.authenticate("jwt", { session: false }),
@@ -123,7 +137,11 @@ app.post(
   }
 );
 
-//Add a user
+/**
+ * Add a user
+ * @param none
+ * @returns {string} A JSON object holding data about the user that was added, including an ID
+ */
 /* We’ll expect JSON in this format
 {
   ID: Integer,
@@ -180,7 +198,11 @@ app.post(
   }
 );
 
-// Update a user's info, by username
+/**
+ * Update a user's info, by username
+ * @param {string} username
+ * @returns {string} A JSON object holding data about the user that was updated
+ */
 /* We’ll expect JSON in this format
 {
   Username: String,
@@ -188,7 +210,6 @@ app.post(
   Password: String,
   (required)
   Email: String,
-  (required)
   Birthday: Date
 }*/
 app.put(
@@ -228,7 +249,11 @@ app.put(
   }
 );
 
-//Return a list of ALL movies
+/**
+ * Return a list of ALL movies
+ * @param none
+ * @returns {string} A JSON object holding data about all movies
+ */
 app.get(
   "/movies",
   passport.authenticate("jwt", { session: false }),
@@ -244,7 +269,11 @@ app.get(
   }
 );
 
-//Return a list of ALL users
+/**
+ * Return a list of ALL users
+ * @param none
+ * @returns {string} A JSON object holding data about all users
+ */
 app.get(
   "/users",
   passport.authenticate("jwt", { session: false }),
@@ -260,7 +289,11 @@ app.get(
   }
 );
 
-//Get user by username
+/**
+ * Get user by username
+ * @param {string} username
+ * @returns {string} A JSON object holding data about the user, including an ID
+ */
 app.get(
   "/users/:username",
   passport.authenticate("jwt", { session: false }),
@@ -276,7 +309,11 @@ app.get(
   }
 );
 
-//Return data about a single movie by title to the user
+/**
+ * Return data about a single movie by title to the user
+ * @param {string} title
+ * @returns {string} A JSON object holding all data about the searched movie
+ */
 app.get(
   "/movies/:title",
   passport.authenticate("jwt", { session: false }),
@@ -292,7 +329,11 @@ app.get(
   }
 );
 
-//Return data about a genre by name/title
+/**
+ * Return data about a genre by name/title
+ * @param {string} name - name of the genre
+ * @returns {string} A JSON object holding all infos about the genre
+ */
 app.get(
   "/genre/:name",
   passport.authenticate("jwt", { session: false }),
@@ -307,7 +348,11 @@ app.get(
   }
 );
 
-//Return data about a director by name
+/**
+ * Return data about a director by name
+ * @param {string} name - name of the director
+ * @returns {string} A JSON object holding all data about the searched director
+ */
 app.get(
   "/director/:name",
   passport.authenticate("jwt", { session: false }),
@@ -322,10 +367,18 @@ app.get(
   }
 );
 
+/**
+ * Go to the home page
+ * @path "/"
+ */
 app.get("/", (req, res) => {
   res.sendFile("public/index.html", { root: __dirname });
 });
 
+/**
+ * Go to the documentation page
+ * @path "/documentation"
+ */
 app.get("/documentation", (req, res) => {
   res.sendFile("public/documentation.html", { root: __dirname });
 });

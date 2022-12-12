@@ -13,7 +13,12 @@ let generateJWTToken = (user) => {
     algorithm: "HS256", //algorithm used to "sign" or encode the values of the JWT
   });
 };
-
+/**
+ * Login the user
+ * @param {string} user
+ * @param {string} password
+ * @returns {string} a valid token
+ */
 /* POST login */
 module.exports = (router) => {
   router.post("/login", (req, res) => {
